@@ -9,9 +9,18 @@ Vue.use(VueRouter)
 //导入vue-resourse
 import VueResource from 'vue-resource'
 Vue.use(VueResource)
+//设置请求根路径
+Vue.http.options.root = 'http://www.liulongbin.top:3005/api'
 
 //导入路由组件
 import router from './router.js'
+
+import moment from 'moment'
+//全局时间过滤器
+Vue.filter('dataFormat',function(dataStr,pattern = 'YYYY-MM-DD HH:mm:ss'){
+  return moment (dataStr).format(pattern)
+})
+
 
 //导入MUI的样式
 import './lib/mui/css/mui.min.css'
