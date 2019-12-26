@@ -1,8 +1,10 @@
 <template>
   <div>
     <ul class="mui-table-view">
-      <li class="mui-table-view-cell mui-media" v-for="item in newList" :key="item.id">
-            <a href="javascript:;">
+      <li class="mui-table-view-cell mui-media" 
+        v-for='(item,i) in newList' :key="item.id">
+            <router-link :to="'/home/newList/newsinfo/' +i"><!-- 因为不是官方接口所以这里选择传 索引值过去获取新闻 -->
+           
               <img class="mui-media-object mui-pull-left" :src="item.img_url">
               <div class="mui-media-body">
                 <h1>{{item.title}}</h1>
@@ -11,7 +13,7 @@
                   <span>点击次数:{{item.click}}</span>
                 </p>
               </div>
-            </a>
+            </router-link>
       </li>
       
       
@@ -20,19 +22,7 @@
 </template>
 
 <script>
-/* Vue.filter('datetime',function(datestr){//  全局/公有  时间过滤器
-    //根据给定的字符串创建特定是时间 上面的datestr来自 表格里面的时间
-    console.log(datestr)
-    var dt = new Date(datestr)
 
-    var y = dt.getFullYear()                                        //年
-    var m = (dt.getMonth() + 1).toString().padStart(2,'0')          //月 .padStart(2,'0')函数   不足2位补齐2位 
-    var d = dt.getDate().toString().padStart(2,'0')                 //日
-    var hh = dt.getHours().toString().padStart(2,'0')               //时
-    var mm = dt.getMinutes().toString().padStart(2,'0')             //分
-    var ss = dt.getSeconds().toString().padStart(2,'0')             //秒
-    
-        return `${y}-${m}-${d} ${hh}:${mm}:${ss}`}) //这种方法叫做模板字符串   `${变量}` */
 export default {
   
   data(){
@@ -62,7 +52,7 @@ export default {
  
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
   img{
     width: 40px;height: 40px
   }

@@ -28,11 +28,12 @@ import './lib/mui/css/icons-extra.css'
 import './lib/mui/fonts/mui-icons-extra.ttf'
 
 // 将按需导入MintUI
-import { Header,Swipe, SwipeItem } from 'mint-ui'
+import { Header,Swipe, SwipeItem ,Button} from 'mint-ui'
 import 'mint-ui/lib/style.css'
 Vue.component(Header.name,Header)//头部组件
 Vue.component(Swipe.name, Swipe);//轮播图组件
 Vue.component(SwipeItem.name, SwipeItem);//轮播图组件
+Vue.component(Button.name, Button);//轮播图组件
 
 
 
