@@ -1,9 +1,9 @@
 <template>
   <div class="cmt-container">
     <h4>发表评论</h4><hr>
-    <textarea placeholder="请输入评论(最多120字)" maxlength="120"></textarea>
+    <textarea placeholder="请输入评论(最多120字)" maxlength="120"  v-model="push"></textarea>
 
-    <mt-button type='primary' size='large'>发表评论</mt-button>
+    <mt-button type='primary' size='large' @click='pushtext()'>发表评论</mt-button>
 
     <div class="cmt-list" v-for="(item,i) in text" :key="item.name">
       <div class="cmt-item">
@@ -22,14 +22,18 @@
 </template>
 
 <script>
-//import { Toast } from "mint-ui";//按需导入弹框组件
+import { Toast } from "mint-ui";//按需导入弹框组件
 
 import textlist from './text.json'//导入自己的评论数据
+
+
 
 export default {
   data(){
     return{
-      text:[],
+      text:[],//评论数据
+      push:'',//发表评论
+      num:12,
       
     }
   },
@@ -37,7 +41,25 @@ export default {
     this.text = textlist
    console.log(this.text);
   },
-  props:['time']//接受父组件传进来的time
+  props:['time'],//接受父组件传进来的time
+  methods:{
+    pushtext(){//发表评论 加载评论未完善
+      if(this.push.trim().length === 0){ //验证是否输入为空
+        return Toast('评论数据不能为空')
+      }
+      var newstext = ({"1":{name:'吃瓜网友',text:this.push}})
+      this.text = newstext
+      this.push = ''
+
+      
+      // console.log(this.text);
+      //  this.text.push({nam:'111',id:'1213'},)
+      //this.text.push({"12":{name:'吃瓜网友',text:this.push}})  未完善
+      
+      // this.text.unshift(newstext)
+      
+    }
+  }
 }
 
 </script>
