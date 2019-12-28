@@ -8,7 +8,7 @@
     <div class="cmt-list" v-for="(item,i) in text" :key="item.name">
       <div class="cmt-item">
         <div class="cmt-title">
-          第{{i}}楼 &nbsp;&nbsp; 网友:{{item.name}}&nbsp;&nbsp; 发表时间:{{time[i]|dataFormat}}&nbsp;&nbsp; 
+          第{{i}}楼 &nbsp;&nbsp; 网友:{{item.name}}&nbsp;&nbsp; 发表时间:{{time|dataFormat}}&nbsp;&nbsp; 
           
         </div>
         <div class="cmt-body">
@@ -39,7 +39,7 @@ export default {
   },
   created(){
     this.text = textlist
-   console.log(this.text);
+    
   },
   props:['time'],//接受父组件传进来的time
   methods:{

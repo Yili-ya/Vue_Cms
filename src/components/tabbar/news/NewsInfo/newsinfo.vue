@@ -29,7 +29,7 @@ export default {
     return {
       id: this.$route.params.id, //新闻id
       newsinfo: {}, //请求的数据
-      time: []
+      time:Date()
     };
   },
 
@@ -44,11 +44,11 @@ export default {
           //console.log(newslist.body.message)
           this.newsinfo = newslist.body.message;
 
-          for (var i = 0; i < 10; i++) {
-            //循环时间数组 然后传递给子组件
-            var a = this.newsinfo[i].add_time;
-            this.time.unshift(a);
-          }
+          // for (var i = 0; i < 10; i++) {
+          //   //循环时间数组 然后传递给子组件
+          //   var a = this.newsinfo[i].add_time;
+          //   this.time.unshift(a);
+          // }
 
           this.newsinfo = newslist.body.message[this.id];//吧当前父组件传的id赋值给数组然后渲染
         } else {

@@ -1,7 +1,7 @@
 <template>
   <div class="app-container">
     <!-- Header 区域 -->
-    <mt-header fixed title='黑马程序员 Vue项目'></mt-header>
+    <mt-header id="header" fixed title='黑马程序员 Vue项目'></mt-header>
 
 
 
@@ -92,5 +92,8 @@
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+#header {
+  z-index: 99;
 }
 </style>
