@@ -3,12 +3,11 @@
   
   
   <div id="Lun">
+    <!-- 轮播图 -->
     <mt-swipe :auto="4000">
-      <!-- 轮播图 -->
       <mt-swipe-item v-for="item in lunbotulist" :key="item.id">
         <img :src="item.img_url" />
       </mt-swipe-item>
-      
     </mt-swipe>
     <!-- 九宫格     -->
 
@@ -56,7 +55,7 @@
 </template>
 
 <script>
-import { Toast } from "mint-ui";
+
 
 export default {
   data() {
@@ -77,9 +76,7 @@ export default {
   methods: {
     getlunbotu() {
       //发起轮播图 图片请求
-      this.$http
-        .get("getnewslist")
-        .then(jpg => {
+      this.$http.get("getnewslist").then(jpg => {
           this.lunbotulist = jpg.body.message;
           //console.log( this.lunbotulist);
         });
@@ -101,6 +98,7 @@ export default {
   height: 60px;
 }
 #Lun{
+  
   width: 100%;
   height: 700px;
   background-color: rgb(254,255,255)
@@ -114,10 +112,11 @@ export default {
 .mint-swipe {
    width: 100%;
   height: 200px;;
-}
-.mint-swipe img {
+  img {
   width: 100%;
   height: 100%;
 }
+}
+
 
 </style>

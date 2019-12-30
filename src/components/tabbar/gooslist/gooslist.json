@@ -1,0 +1,100 @@
+{
+  "0":{
+  "img":"//m.360buyimg.com/babel/s350x350_jfs/t1/102482/23/3450/416986/5de0c372E24dc4d8a/d1c06eb6e7b2466a.jpg!q70.dpg",   
+  "title":"荣耀V30 PRO 5G 双模 麒麟990 5G",  
+  "nownum":"3899", 
+  "oldnum":"4500", 
+  "surplus":"999",
+  "img_url":[
+    {"src":"./src/imges/honor v30/1(1).jpg"},
+    {"src":"./src/imges/honor v30/1(2).jpg"},
+    {"src":"./src/imges/honor v30/1(3).jpg"},
+    {"src":"./src/imges/honor v30/1(4).jpg"}
+  ],
+  "goods":"SD2932156"
+  
+  },
+  "1":{
+  "img":"//m.360buyimg.com/mobilecms/s750x750_jfs/t1/92604/31/422/78899/5dad86d9E6418b49a/d6a8327fe7a7dede.jpg!q80.dpg.webp",   
+  "title":"华为 nova5z 手机 幻夜黑 全网通版(6G+64G)",  
+  "nownum":"1499", 
+  "oldnum":"2199", 
+  "surplus":"999",
+  "img_url":[
+    {"src":"./src/imges/huawei nova5s/1(1).jpg"},
+    {"src":"./src/imges/huawei nova5s/1(2).jpg"},
+    {"src":"./src/imges/huawei nova5s/1(3).jpg"},
+    {"src":"./src/imges/huawei nova5s/1(4).jpg"}
+  ]
+  
+  },
+  "2":{
+  "img":"//img12.360buyimg.com/n1/s450x450_jfs/t1/81399/34/7731/205232/5d5b5bfcE29f3078e/e9ebcd669b7ad338.jpg",   
+  "title":"三星Galaxy S10 晓龙855",  
+  "nownum":"5999", 
+  "oldnum":"6399", 
+  "surplus":"999",
+  "img_url":[
+    {"src":"./src/imges/sanxing noto10/1(1).jpg"},
+    {"src":"./src/imges/sanxing noto10/1(2).jpg"},
+    {"src":"./src/imges/sanxing noto10/1(3).jpg"},
+    {"src":"./src/imges/sanxing noto10/1(4).jpg"}
+  ]
+  
+  },
+  "3":{
+  "img":"//m.360buyimg.com/mobilecms/s750x750_jfs/t1/100836/20/8098/135076/5e01d953E90a50f90/1103b20439265303.jpg!q80.dpg.webp",   
+  "title":"realme 真我X2 Pro ",  
+  "nownum":"2899", 
+  "oldnum":"3199", 
+  "surplus":"999",
+  "img_url":[
+    {"src":"./src/imges/realme x2/1(1).jpg"},
+    {"src":"./src/imges/realme x2/1(2).jpg"},
+    {"src":"./src/imges/realme x2/1(3).jpg"},
+    {"src":"./src/imges/realme x2/1(4).jpg"}
+  ]
+  
+  },
+  "4":{
+  "img":"//m.360buyimg.com/mobilecms/s750x750_jfs/t1/85394/12/8241/201214/5e01d76eE5f4b4ec6/c17b062d83417e0f.jpg!q80.dpg.webp",   
+  "title":"Apple iPad Pro 12.9英寸平板电脑",  
+  "nownum":"8159", 
+  "oldnum":"9059", 
+  "surplus":"999",
+  "img_url":[
+    {"src":"./src/imges/Ipad pro/1(1).jpg"},
+    {"src":"./src/imges/Ipad pro/1(2).jpg"},
+    {"src":"./src/imges/Ipad pro/1(3).jpg"},
+    {"src":"./src/imges/Ipad pro/1(4).jpg"}
+  ]
+  
+  },
+  "5":{
+  "img":"//m.360buyimg.com/mobilecms/s750x750_jfs/t1/63319/31/15156/210248/5dcd1f04E92d36d33/3e35450745f21b3b.jpg!q80.dpg.webp",   
+  "title":"三星 Galaxy Note10 ",  
+  "nownum":"6599", 
+  "oldnum":"7000", 
+  "surplus":"999",
+  "img_url":[
+    {"src":"./src/imges/sanxing s10/1(1).jpg"},
+    {"src":"./src/imges/sanxing s10/1(2).jpg"},
+    {"src":"./src/imges/sanxing s10/1(3).jpg"}
+  ]
+  
+  },
+  "6":{
+  "img":"//m.360buyimg.com/mobilecms/s750x750_jfs/t1/101234/32/8752/167496/5e06cbb4E991b5ac5/699eda27f9ef225a.jpg!q80.dpg.webp",   
+  "title":"华为 HUAWEI Mate 30 Pro 5G ",  
+  "nownum":"6899", 
+  "oldnum":"7500", 
+  "surplus":"999",
+  "img_url":[
+    {"src":"./src/imges/HUAWEI mate30/1(1).jpg"},
+    {"src":"./src/imges/HUAWEI mate30/1(2).jpg"},
+    {"src":"./src/imges/HUAWEI mate30/1(3).jpg"},
+    {"src":"./src/imges/HUAWEI mate30/1(4).jpg"}
+  ]
+  
+  }
+}

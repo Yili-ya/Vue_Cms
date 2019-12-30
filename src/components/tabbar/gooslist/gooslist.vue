@@ -2,112 +2,106 @@
   <div>
     <div class="goods-list">
       
-      <div class="goods-item">
-        <img src="https://img.alicdn.com/imgextra/i4/1114511827/O1CN01O9I4jB1PMo8ZV4Sce_!!1114511827.jpg_430x430q90.jpg">
-        <h1 class="title">华为(HUAWEI)HONOR荣耀8X</h1>
-        <div class="info">
-        
-          <p class="price">
-            <span class="now">¥2199</span>
-            <span class="old">1999</span>
-          </p>
-          <p class="sell">
-            <span>热卖中</span>
-            <span>剩60件</span>
-          </p>
-        </div>
-      </div>
-
-      <div class="goods-item">
-        <img src="https://img.alicdn.com/imgextra/i4/1114511827/O1CN01O9I4jB1PMo8ZV4Sce_!!1114511827.jpg_430x430q90.jpg">
-        <h1 class="title">华为(HUAWEI)HONOR荣耀8X</h1>
-        <div class="info">
-        
-          <p class="price">
-            <span class="now">¥2199</span>
-            <span class="old">1999</span>
-          </p>
-          <p class="sell">
-            <span>热卖中</span>
-            <span>剩60件</span>
-          </p>
-        </div>
-      </div>
-      <div class="goods-item">
-        <img src="https://img.alicdn.com/imgextra/i4/1114511827/O1CN01O9I4jB1PMo8ZV4Sce_!!1114511827.jpg_430x430q90.jpg">
-        <h1 class="title">华为(HUAWEI)HONOR荣耀8X</h1>
-        <div class="info">
-        
-          <p class="price">
-            <span class="now">¥2199</span>
-            <span class="old">1999</span>
-          </p>
-          <p class="sell">
-            <span>热卖中</span>
-            <span>剩60件</span>
-          </p>
-        </div>
-      </div>
 
       
 
+      <div class="goods-item" v-for="(item,i) in shoplist" :key="i" @click="router(i)">
+        <img :src="item.img" />
+        <h1 class="title">{{item.title}}</h1>
+
+        <div class="info">
+          <p class="price">
+            <span class="now">¥{{item.nownum}}</span>
+            <span class="old">{{item.oldnum}}</span>
+          </p>
+          <p class="sell">
+            <span>热卖中</span>
+            <span>剩{{item.surplus}}件</span>
+          </p>
+        </div>
+      </div>
     </div>
+    <mt-button type='danger' size='large' @click.prevent='btn()' >加载更多</mt-button>
   </div>
 </template>
 
-<style lang="scss" scoped>
-.goods-list{
-  display: flex;
-  flex-wrap:wrap;
-  padding:7px;
-  justify-content: space-between;
-  min-height:293px;
+<script>
+import shoplist from "./gooslist.json"; //导入自定义的商品数据
 
-  .goods-item{
+import {Toast} from 'mint-ui'
+
+export default {
+  data() {
+    return {
+      shoplist //这里必须return一下shoplist 不然在上面是渲染不到的!!!!!!!!!!!!!!!!!!!!!!
+    };
+  },
+
+  created() {},
+  //由于没有数据接口这模拟一个本地接口
+  methods: {
+    router(i) {
+      this.$router.push({ path: "/home/goosinfo/" + i });
+      // this.$router.push({name:'gooslist',params:{id:i}})
+    },
+    btn(){
+      return Toast('商品已加载完毕')
+    }
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+.goods-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 7px;
+  justify-content: space-between;
+
+  .goods-item {
     width: 49%;
     border: 1px solid #ccc;
     margin: 4px 0;
     box-shadow: 0 0 8px #ccc;
     display: flex;
     flex-direction: column;
-    justify-content:space-around;
+    justify-content: space-around;
 
-    img{
+    img {
       width: 100%;
     }
-    .title{
+    .title {
       color: black;
       font-size: 15px;
-      text-align: left
+      text-align: left;
+      min-height: 45px;
     }
-    .info{
+    .info {
       background-color: #ddd;
-      .price{
+
+      .price {
         display: flex;
-        flex-wrap:wrap;
+        flex-wrap: wrap;
         justify-content: space-between;
-        .now{
+        .now {
           padding: 10px;
           color: red;
-          font-size:18px;
-          
+          font-size: 18px;
         }
-        .old{
-          padding-right:70px;
+        .old {
+          padding-right: 70px;
           padding-top: 10px;
           text-decoration: line-through;
-          font-size:12px;
+          font-size: 12px;
         }
       }
-      .sell{
+      .sell {
         margin: 0 5px;
-        
         display: flex;
-        flex-wrap:wrap;
+        flex-wrap: wrap;
         justify-content: space-between;
       }
     }
   }
 }
-  
 </style>

@@ -4,6 +4,7 @@
     <textarea placeholder="请输入评论(最多120字)" maxlength="120"  v-model="push"></textarea>
 
     <mt-button type='primary' size='large' @click='pushtext()'>发表评论</mt-button>
+    
 
     <div class="cmt-list" v-for="(item,i) in text" :key="item.name">
       <div class="cmt-item">
@@ -17,7 +18,7 @@
       </div>
     </div>
 
-    <mt-button type='danger' size='large' plain>加载更多</mt-button>
+    <mt-button type='danger' size='large' plain @click='btn()'>加载更多</mt-button>
   </div>
 </template>
 
@@ -28,7 +29,7 @@ import textlist from './text.json'//导入自己的评论数据
 
 
 
-export default {
+export default{
   data(){
     return{
       text:[],//评论数据
@@ -58,6 +59,9 @@ export default {
       
       // this.text.unshift(newstext)
       
+    },
+    btn(){
+      return Toast("已经没有评论啦");
     }
   }
 }
