@@ -4,7 +4,7 @@
   "title":"荣耀V30 PRO 5G 双模 麒麟990 5G",  
   "nownum":"3899", 
   "oldnum":"4500", 
-  "surplus":"999",
+  "surplus":"12",
   "img_url":[
     {"src":"./src/imges/honor v30/1(1).jpg"},
     {"src":"./src/imges/honor v30/1(2).jpg"},
@@ -19,7 +19,7 @@
   "title":"华为 nova5z 手机 幻夜黑 全网通版(6G+64G)",  
   "nownum":"1499", 
   "oldnum":"2199", 
-  "surplus":"999",
+  "surplus":"9",
   "img_url":[
     {"src":"./src/imges/huawei nova5s/1(1).jpg"},
     {"src":"./src/imges/huawei nova5s/1(2).jpg"},
@@ -33,7 +33,7 @@
   "title":"三星Galaxy S10 晓龙855",  
   "nownum":"5999", 
   "oldnum":"6399", 
-  "surplus":"999",
+  "surplus":"15",
   "img_url":[
     {"src":"./src/imges/sanxing noto10/1(1).jpg"},
     {"src":"./src/imges/sanxing noto10/1(2).jpg"},
@@ -47,7 +47,7 @@
   "title":"realme 真我X2 Pro ",  
   "nownum":"2899", 
   "oldnum":"3199", 
-  "surplus":"999",
+  "surplus":"60",
   "img_url":[
     {"src":"./src/imges/realme x2/1(1).jpg"},
     {"src":"./src/imges/realme x2/1(2).jpg"},
@@ -61,7 +61,7 @@
   "title":"Apple iPad Pro 12.9英寸平板电脑",  
   "nownum":"8159", 
   "oldnum":"9059", 
-  "surplus":"999",
+  "surplus":"45",
   "img_url":[
     {"src":"./src/imges/Ipad pro/1(1).jpg"},
     {"src":"./src/imges/Ipad pro/1(2).jpg"},
@@ -75,7 +75,7 @@
   "title":"三星 Galaxy Note10 ",  
   "nownum":"6599", 
   "oldnum":"7000", 
-  "surplus":"999",
+  "surplus":"54",
   "img_url":[
     {"src":"./src/imges/sanxing s10/1(1).jpg"},
     {"src":"./src/imges/sanxing s10/1(2).jpg"},
@@ -88,7 +88,7 @@
   "title":"华为 HUAWEI Mate 30 Pro 5G ",  
   "nownum":"6899", 
   "oldnum":"7500", 
-  "surplus":"999",
+  "surplus":"37",
   "img_url":[
     {"src":"./src/imges/HUAWEI mate30/1(1).jpg"},
     {"src":"./src/imges/HUAWEI mate30/1(2).jpg"},

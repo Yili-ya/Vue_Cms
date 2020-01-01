@@ -1,9 +1,9 @@
 <template>
   <div class="app-container">
     <mt-header id="header" fixed  title="黑马程序员 Vue项目">
-      <router-link to='/' @click.prevent='url()' slot="left">
-        <mt-button icon="back">返回</mt-button>
-      </router-link>
+      <span @click.prevent='url()' slot="left">
+        <mt-button icon="back" v-show="flag">返回</mt-button>
+      </span>
     </mt-header>
 
 
@@ -26,7 +26,7 @@
 			</router-link>
 			<router-link class="mui-tab-item-llb" to="/shopcar">
 				<span class="mui-icon mui-icon-extra mui-icon-extra-cart">
-          <span class="mui-badge">0</span></span>
+          <span class="mui-badge" id="badge">{{$store.getters.num}}</span></span>
 				<span class="mui-tab-label">购物车</span>
 			</router-link>
 			<router-link class="mui-tab-item-llb" to="/searchh">
@@ -42,11 +42,32 @@
 
 <script>
 export default {
-  methods:{
-    url(){
-      this.$router.go--
+  data(){
+    return{
+       flag : false
     }
-  }
+  },
+  created(){
+      this.flag = this.$route.path === '/home' ?false:true
+    },
+
+  methods:{
+    url(){ //网页退一
+      this.$router.go(-1)
+    },
+    
+  },
+  watch: {//判断当前所在页面 显示隐藏按钮
+      '$route.path':function(newVal){
+        if(newVal === '/home'){
+          this.flag = true
+
+        }else{
+          this.flag = true
+        }
+        
+      }
+    },
 }
 </script>
 
@@ -104,5 +125,8 @@ export default {
 }
 #header {
   z-index: 99;
+}
+.mui-bar{
+  min-height: 50px;
 }
 </style>
