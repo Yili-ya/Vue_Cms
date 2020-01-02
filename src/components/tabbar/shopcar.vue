@@ -15,7 +15,7 @@
               <div class="goods-info">
                 <span class="price">￥{{ item.price}}</span>&nbsp;&nbsp;
                 <!-- countObj[item.id] 表示这条商品对应的数量 -->
-                <nobox :value="goodslist[0].count" :id='item.id'></nobox>
+                <nobox :value="goodslist[item.id].count" :id='item.id'></nobox>
                 <a href="#" @click.prevent="del(item.id,i)">删除</a>
               </div>
             </div>
