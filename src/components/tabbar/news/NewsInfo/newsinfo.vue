@@ -35,12 +35,13 @@ export default {
 
   created() {
     this.Newsinfo();
+    console.log(this.$route.params.id)
   },
   methods: {
     Newsinfo() {
       this.$http.get("getnewslist/").then(newslist => {
         //本来是要按id查询的因为不是官方接口 没有提供传参放回队友新闻,所以这里选择传索引值获取队友新闻
-        if (newslist.body.status === 0) {
+        if (newslist.body.status === 0) {//如果返回值是0说明请求失败
           //console.log(newslist.body.message)
           this.newsinfo = newslist.body.message;
 

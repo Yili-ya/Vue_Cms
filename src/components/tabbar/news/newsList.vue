@@ -41,7 +41,7 @@ export default {
     newlist(){//获取新闻get
       this.$http.get('getnewslist')
         .then(list =>{
-          //console.log(list.body.message);
+          console.log(list.body.message);
           this.newList = list.body.message
         })
     }

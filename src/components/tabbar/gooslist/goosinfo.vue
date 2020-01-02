@@ -38,7 +38,8 @@
               <!-- 在实际开发中这里传递的值,可能还没通过ajax获取过来所以是defined 
                 ,所以要在子组件定义 watch监听一下这个值的改变 -->
               购买数量:&nbsp;&nbsp;&nbsp;           
-              <numbox @getCount='getSelectedCound' :surplusid='surplus' ></numbox><!--调用子组件的时候传递一个方法-->
+              <numbox @getCount='getSelectedCound' :surplusid='surplus' 
+              ></numbox><!--调用子组件的时候传递一个方法-->
             </p>
             <p>
               <mt-button type="primary" size="small">立即购买</mt-button>&nbsp;
@@ -116,7 +117,7 @@ export default {
 
     text(id) {
       //编程时导航加载图文介绍
-      this.$router.push({ name: "goodsdesc", params: { id } });
+      this.$router.push({ name: "goodsdesc", params:  id  });
 
       this.texttitle = gooslist[this.id].title;
     },
@@ -169,10 +170,18 @@ export default {
      // this.flag = !this.flag;小球的动画
       /* {id:商品的id , count : 购买的数量 , price: 商品的单价 , selected:false 商品是否被选中 加入计算} */
       //点击购物车时 的商品信息
-      this.car = {id:this.id, count:this.thiscount, price:gooslist[this.id].nownum, selected:true,  imgurl:this.gooslist[this.id].img_url[0].src,  title:this.gooslist[this.id].title}
+      this.car = {
+        id:this.id, 
+        count:this.thiscount, 
+        price:gooslist[this.id].nownum, 
+        selected:true,  
+        imgurl:this.gooslist[this.id].img_url[0].src,
+        title:this.gooslist[this.id].title,
+        surplus:this.surplus
+      }
       // console.log(this.gooslist[this.id].title);
       this.$store.commit('goosinfo',this.car)
-      console.log(this.car);
+      // console.log(this.surplus);
     },
     
   },

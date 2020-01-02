@@ -2,10 +2,8 @@
   <div>
     <div class="goods-list">
       
-
-      
-
-      <div class="goods-item" v-for="(item,i) in shoplist" :key="i" @click="router(i)">
+      <div class="goods-item" v-for="(item,i) in shoplist" 
+      :key="i" @click="router(i)">
         <img :src="item.img" />
         <h1 class="title">{{item.title}}</h1>
 
@@ -18,7 +16,7 @@
             <span>热卖中</span>
             <span>剩{{item.surplus}}件</span>
           </p>
-        </div>
+      </div>
       </div>
     </div>
     <mt-button type='danger' size='large' @click.prevent='btn()' >加载更多</mt-button>

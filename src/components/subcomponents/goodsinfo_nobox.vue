@@ -1,5 +1,5 @@
 <template>
-  <div class="mui-numbox" data-numbox-min='1' :data-numbox-max='9'>
+  <div class="mui-numbox" data-numbox-min='1' :data-numbox-max='surplus'>
     <button class="mui-btn mui-btn-numbox-minus" type="button" >-</button>
     <!-- 监听文本框的 change 事件，来动态获取选择到的数量 -->
     <input id="test" class="mui-input-numbox" type="number" :value="value" 
@@ -9,20 +9,20 @@
 </template>
 
 <script>
-import mui from '../../lib/mui/js/mui.js'
+// import mui from '../../lib/mui/js/mui.js'
 
 export default {
   data() {
     return {};
   },
-  props:['value','id'],
+  props:['value','id','surplus'],
   
   mounted() {
     // 当组件挂载到页面中之后，去初始化 数字框
     // console.log(this.max);
-    mui(".mui-numbox").numbox();
+    // mui(".mui-numbox").numbox();
     // console.log(this.value);
-    // console.log(this.value);
+    // console.log(this.id,this.value);
   },
   created(){
     // console.log(this.value);
@@ -47,7 +47,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.img{
-  
-}
+
 </style>

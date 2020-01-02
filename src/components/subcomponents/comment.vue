@@ -13,7 +13,7 @@
           
         </div>
         <div class="cmt-body">
-         评论到:{{item.text === 'undefined' ? '用户发表了一个空格':item.text}}
+         评论到:{{item.text === 'undefined'?'用户什么都没说':item.text}}
         </div>
       </div>
     </div>

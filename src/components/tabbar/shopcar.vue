@@ -5,8 +5,10 @@
         <div class="mui-card-content">
           <div class="mui-card-content-inner goods-item">
             <!-- 开关 -->
-            <mt-switch v-model="$store.getters.getGoodsselected[item.id] "
-            @change='selectedChanged(item.id,$store.getters.getGoodsselected[item.id] )'></mt-switch>
+            <mt-switch
+              v-model="$store.getters.getGoodsselected[item.id] "
+              @change="selectedChanged(item.id,$store.getters.getGoodsselected[item.id] )"
+            ></mt-switch>
             <!-- 图片 -->
             <img :src="item.imgurl" />
             <!-- 信息区域 -->
@@ -15,7 +17,11 @@
               <div class="goods-info">
                 <span class="price">￥{{ item.price}}</span>&nbsp;&nbsp;
                 <!-- countObj[item.id] 表示这条商品对应的数量 -->
-                <nobox :value="goodslist[item.id].count" :id='item.id'></nobox>
+                <nobox
+                  :value="goodslist[item.id].count"
+                  :id="item.id"
+                  :surplus="$store.state.car[item.id].surplus"
+                ></nobox>&nbsp;
                 <a href="#" @click.prevent="del(item.id,i)">删除</a>
               </div>
             </div>
@@ -35,15 +41,14 @@
                 <span class="danger">￥{{ $store.getters.totalPrice.price }}</span>
               </p>
             </div>
-            <mt-button type="danger">去结算</mt-button>
+            <mt-button type="danger" @click="btn">去结算</mt-button>
           </div>
         </div>
       </div>
-      
+
       <!-- {{ JSON.stringify(seletedObj) }} -->
     </div>
-    <p>{{$store.getters.getGoodsselected}}</p>
-    <p>{{this.$store.state.car}}</p>
+    <!-- <p>{{$store.getters.getGoodsselected}}</p> -->
   </div>
 </template>
 
@@ -51,29 +56,33 @@
 // import { mapGetters, mapMutations } from "vuex";
 import nobox from "../subcomponents/goodsinfo_nobox.vue";
 
+import { Toast } from "mint-ui";
+
 export default {
   data() {
     return {
       goodslist: [], // 商品列表
-      img1: "./src/imges/2333.jpg",
-      
+      img1: "./src/imges/2333.jpg"
     };
   },
   created() {
-    if (this.$store.state.car.length < 0)  return;
+    if (this.$store.state.car.length < 0) return;
     // console.log('233');
     this.goodslist = this.$store.state.car;
     //  console.log(this.goodslist[0].count);
-    
   },
   methods: {
-    del(id,index){//删除
-      this.goodslist.splice(index,1)//删除网页列表
-      this.$store.commit('remove',id)
+    del(id, index) {
+      //删除
+      this.goodslist.splice(index, 1); //删除网页列表
+      this.$store.commit("remove", id);
     },
 
-    selectedChanged(id,val){
-     this.$store.commit('selectedChanged',{id,selected:val})
+    selectedChanged(id, val) {
+      this.$store.commit("selectedChanged", { id, selected: val });
+    },
+    btn() {
+      return Toast("暂时还不支持还功能");
     }
   },
   components: {
@@ -92,7 +101,6 @@ export default {
     img {
       width: 60px;
       height: 60px;
-      
     }
     h1 {
       font-size: 13px;
@@ -109,7 +117,6 @@ export default {
           color: red;
           font-weight: bold;
           font-size: 16px;
-          
         }
       }
     }
