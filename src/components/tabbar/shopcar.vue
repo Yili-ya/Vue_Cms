@@ -15,8 +15,8 @@
               <div class="goods-info">
                 <span class="price">￥{{ item.price}}</span>&nbsp;&nbsp;
                 <!-- countObj[item.id] 表示这条商品对应的数量 -->
-                <nobox :value="goodslist[item.id].count" :id='item.id'></nobox>
-                <a href="#" @click.prevent="del(item.id,i)">删除</a>
+                <nobox :value="goodslist[item.id].count" :id='item.id' :surplus='$store.state.car[item.id].surplus'></nobox>
+                &nbsp;<a href="#" @click.prevent="del(item.id,i)">删除</a>
               </div>
             </div>
           </div>
@@ -35,21 +35,24 @@
                 <span class="danger">￥{{ $store.getters.totalPrice.price }}</span>
               </p>
             </div>
-            <mt-button type="danger">去结算</mt-button>
+            <mt-button type="danger" @click='btn'>去结算</mt-button>
           </div>
         </div>
       </div>
       
       <!-- {{ JSON.stringify(seletedObj) }} -->
     </div>
-    <p>{{$store.getters.getGoodsselected}}</p>
-    <p>{{this.$store.state.car}}</p>
+    <!-- <p>{{$store.getters.getGoodsselected}}</p> -->
+    
   </div>
 </template>
 
 <script>
 // import { mapGetters, mapMutations } from "vuex";
 import nobox from "../subcomponents/goodsinfo_nobox.vue";
+
+import {Toast} from 'mint-ui'
+
 
 export default {
   data() {
@@ -74,6 +77,9 @@ export default {
 
     selectedChanged(id,val){
      this.$store.commit('selectedChanged',{id,selected:val})
+    },
+    btn(){
+      return Toast('暂时还不支持还功能')
     }
   },
   components: {
