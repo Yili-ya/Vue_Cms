@@ -50,6 +50,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.move {
+  position: absolute;
+  bottom: 50px;
+}
 .goods-list {
   display: flex;
   flex-wrap: wrap;
@@ -101,9 +105,5 @@ export default {
       }
     }
   }
-}
-.move {
-  position: absolute;
-  bottom: 50px;
 }
 </style>
