@@ -1,9 +1,7 @@
 <template>
   <div>
     <div class="goods-list">
-      
-      <div class="goods-item" v-for="(item,i) in shoplist" 
-      :key="i" @click="router(i)">
+      <div class="goods-item" v-for="(item,i) in shoplist" :key="i" @click="router(i)">
         <img :src="item.img" />
         <h1 class="title">{{item.title}}</h1>
 
@@ -16,17 +14,17 @@
             <span>热卖中</span>
             <span>剩{{item.surplus}}件</span>
           </p>
-      </div>
+        </div>
       </div>
     </div>
-    <mt-button type='danger' size='large' @click.prevent='btn()' >加载更多</mt-button>
+    <mt-button type="danger" size="large" @click.prevent="btn()" class="move">加载更多</mt-button>
   </div>
 </template>
 
 <script>
 import shoplist from "./gooslist.json"; //导入自定义的商品数据
 
-import {Toast} from 'mint-ui'
+import { Toast } from "mint-ui";
 
 export default {
   data() {
@@ -35,15 +33,17 @@ export default {
     };
   },
 
-  created() {},
+  created() {
+    var move = document.querySelector(".move");
+  },
   //由于没有数据接口这模拟一个本地接口
   methods: {
     router(i) {
       this.$router.push({ path: "/home/goosinfo/" + i });
       // this.$router.push({name:'gooslist',params:{id:i}})
     },
-    btn(){
-      return Toast('商品已加载完毕')
+    btn() {
+      return Toast("商品已加载完毕");
     }
   }
 };
@@ -101,5 +101,9 @@ export default {
       }
     }
   }
+}
+.move {
+  position: absolute;
+  bottom: 50px;
 }
 </style>
