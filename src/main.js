@@ -77,11 +77,6 @@ var store = new Vuex.Store({//vuex 全局状态管理
           item.count += parseInt(goosinfo.count)  //这里因为是在商品页面 在购物车可能之前已
           flag = true                             // 经添加过同样的商品所有要和之前的值 += 不能覆盖
           return true
-<<<<<<< HEAD
-
-=======
-      
->>>>>>> fe408d4da7a7549f6959efcffc7c61e83b4a1a73
         }
       })
       //如果没有添加一条新的商品数据
@@ -125,7 +120,6 @@ var store = new Vuex.Store({//vuex 全局状态管理
 
   },
   ////////////////////////////////////////////////////////////////
-<<<<<<< HEAD
   getters: {//this.$store.getters.***
     /*  num(state){
        var c = 0;
@@ -138,20 +132,6 @@ var store = new Vuex.Store({//vuex 全局状态管理
      }, */
 
     getGoodsselected(stare) {//默认选中状态
-=======
-  getters:{//this.$store.getters.***
-   /*  num(state){
-      var c = 0;
-      state.car.forEach(item=>{
-        c += parseInt(item.count)
-        // console.log(c);
-          // if(item.count.length<0) return true
-      })
-      return c 
-    }, */
-
-    getGoodsselected(stare){//默认选中状态
->>>>>>> fe408d4da7a7549f6959efcffc7c61e83b4a1a73
       var o = {}
       stare.car.forEach(item => {
         o[item.id] = item.selected
