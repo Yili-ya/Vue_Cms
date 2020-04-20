@@ -20,11 +20,11 @@
       <div class="meui">
         <span>发表时间:{{this.newlist[this.key].add_time |dataFormat}}</span>
       </div>
-      <router-link to="/home/phtoslist/phtosinfo"  >
+      
       <div id="imgg">
         <img :src="this.newlist[this.key].img_url" />
       </div>
-      </router-link>
+      
       <span>{{this.newlist[this.key].zhaiyao}}</span>
       <br />
     </div>

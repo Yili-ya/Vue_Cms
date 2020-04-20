@@ -31,19 +31,19 @@
           <div class="mui-media-body">商品购买</div>
         </router-link>
       </li>
-      <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+      <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3" @click="toast">
         <a href="#">
           <img src="src/imges/4.png" />
           <div class="mui-media-body">留言反馈</div>
         </a>
       </li>
-      <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+      <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3" @click="toast">
         <a href="#">
           <img src="src/imges/5.png" />
           <div class="mui-media-body">视频专区</div>
         </a>
       </li>
-      <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+      <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3" @click="toast">
         <a href="#">
           <img src="src/imges/6.png" />
           <div class="mui-media-body">联系我们</div>
@@ -56,6 +56,7 @@
 
 <script>
 
+import { Toast } from "mint-ui";
 
 export default {
   data() {
@@ -80,6 +81,9 @@ export default {
           this.lunbotulist = jpg.body.message;
           //console.log( this.lunbotulist);
         });
+    },
+    toast(){
+      return Toast('功能未开放')
     }
   }
 };

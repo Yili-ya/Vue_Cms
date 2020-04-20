@@ -8,7 +8,6 @@ import seachh  from './components/tabbar/seach.vue'
 import newList from './components/tabbar/news/newsList.vue'
 import newsinfo from './components/tabbar/news/NewsInfo/newsinfo.vue'
 import photos  from './components/tabbar/photos/phtoslist.vue'
-import phtosinfo from './components/tabbar/photos/phtosinfo.vue'
 import gooslist from './components/tabbar/gooslist/gooslist.vue'
 import goosinfo from './components/tabbar/gooslist/goosinfo.vue'
 import goodsdesc from './components/tabbar/gooslist/goodsdesc.vue'
@@ -25,7 +24,6 @@ var router = new VueRouter({
     {path : '/home/newList',  component:newList},//首页>新闻资讯
     {path : '/home/newList/newsinfo/:id',  component:newsinfo},//首页>新闻资讯>详细
     {path : '/home/phtoslist',component:photos},//首页>图片分享
-    {path : '/home/phtoslist/phtosinfo/',component:phtosinfo},//首页>图片分享>图片详细
     {path : '/home/gooslist',component:gooslist}, //商品购买
     {path : '/home/goosinfo/:id',component:goosinfo,name:'gooslist'},//商品购买>商品详情
     {path : '/home/goosinfo/goodsdesc/:id',component:goodsdesc,name:'goodsdesc'},//商品购买>商品详情>商品图片详细
