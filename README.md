@@ -1,4 +1,4 @@
-# Vue 项目
+# Vue 电商项目
 
 ##	技术栈:H5 + CSS3 + Js + vue + ElementUi + MUI + Git+ webpack
 
